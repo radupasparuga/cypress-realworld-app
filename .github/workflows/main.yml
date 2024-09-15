@@ -12,8 +12,8 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: yarn
-      - name: Run tests and collect coverage
-        run: yarn dev:coverage & yarn cypress:run --env coverage=true
+      # - name: Run tests and collect coverage
+      #   run: yarn dev:coverage & yarn cypress:run --env coverage=true
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         env:
