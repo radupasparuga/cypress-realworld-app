@@ -16,7 +16,7 @@ const theme = createTheme({
     // htmlFontSize: 18.285714285714286,
     fontSize: 14 * 0.875,
     body1: {
-      lineHeight: 1.43,
+      lineHeight: 1.44,
       letterSpacing: "0.01071em",
     },
   },
