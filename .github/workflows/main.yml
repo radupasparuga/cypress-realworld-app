@@ -13,7 +13,8 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Run tests and collect coverage
-        run: yarn dev:coverage & yarn cypress:run --env coverage=true
+        run: |
+          yarn dev:coverage && yarn cypress:run --env coverage=true
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.3.0
             
