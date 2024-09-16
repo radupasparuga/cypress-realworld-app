@@ -10,8 +10,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Install dependencies
-        run: yarn
+      # - name: Install dependencies
+      #   run: yarn
       # - name: Run tests and collect coverage
       #   run: yarn dev:coverage & yarn cypress:run --env coverage=true
       - name: Coveralls GitHub Action

@@ -243,7 +243,8 @@
     ],
     "reporter": [
       "html",
-      "json"
+      "json",
+      "lcov"
     ]
   },
   "packageManager": "yarn@1.22.22"
