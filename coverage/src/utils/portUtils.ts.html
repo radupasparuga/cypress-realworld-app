@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">67.74% </span>
+                <span class="strong">30% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/31</span>
+                <span class='fraction'>3/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.5% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>20/32</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">41.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/12</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.77% </span>
+                <span class="strong">30% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/18</span>
+                <span class='fraction'>3/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -89,55 +89,55 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-yes">34x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-yes">103x</span>
+<span class="cline-any cline-yes">103x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">103x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">68x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import chalk from "chalk";
 import detect from "detect-port";
 &nbsp;
-export const <span class="fstat-no" title="function not covered" >frontendPort = p</span>rocess.env.<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >PORT;</span></span>
+export const frontendPort = process.env.PORT;
 export const backendPort = process.env.VITE_BACKEND_PORT;
 &nbsp;
-export const <span class="fstat-no" title="function not covered" >getBackendPort = <span class="fstat-no" title="function not covered" >a</span>sync () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return detect(<span class="fstat-no" title="function not covered" >Number(backendPort)<span class="cstat-no" title="statement not covered" ></span>)</span></span>
-    .<span class="cstat-no" title="statement not covered" >then(<span class="fstat-no" title="function not covered" >(_</span>port) =&gt; <span class="cstat-no" title="statement not covered" >{</span></span>
-<span class="cstat-no" title="statement not covered" >      <span class="missing-if-branch" title="if path not taken" >I</span>if (Number(backendPort) === _port) <span class="branch-1 cbranch-no" title="branch not covered" >{</span></span>
-        console.log(chalk.green(`Backend server running at http://localhost:${backendPort}`));
-        return Number(backendPort);
+export const getBackendPort = <span class="fstat-no" title="function not covered" >async () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  return detect(Number(backendPort))</span>
+    .then(<span class="fstat-no" title="function not covered" >(_</span>port) =&gt; {
+<span class="cstat-no" title="statement not covered" >      <span class="missing-if-branch" title="if path not taken" >I</span>if (Number(backendPort) === _port) {</span>
+<span class="cstat-no" title="statement not covered" >        console.log(chalk.green(`Backend server running at http://localhost:${backendPort}`));</span>
+<span class="cstat-no" title="statement not covered" >        return Number(backendPort);</span>
       }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      console.log(</span>
-        chalk.<span class="fstat-no" title="function not covered" >red(</span>
-          `Failed to start the backend server on port ${backendPort<span class="cstat-no" title="statement not covered" >}. \n Starting the backend server on port ${_</span>port}. \n Please update VITE_BACKEND_PORT in the .env file and 'apiUrl' in cypress.json to ${_port}.`
-        <span class="missing-if-branch" title="if path not taken" >I</span>)
+        chalk.red(
+          `Failed to start the backend server on port ${backendPort}. \n Starting the backend server on port ${_port}. \n Please update VITE_BACKEND_PORT in the .env file and 'apiUrl' in cypress.json to ${_port}.`
+        )
       );
-      return <span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>_port;</span></span>
+<span class="cstat-no" title="statement not covered" >      return _port;</span>
     })
-    .catch((<span class="missing-if-branch" title="if path not taken" >I</span>err) =&gt; <span class="cstat-no" title="statement not covered" >{</span>
-      console.log(chalk.red(err));
+    .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log(chalk.red(err));</span>
     });
-<span class="cstat-no" title="statement not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >};</span></span>
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -145,7 +145,7 @@ export const <span class="fstat-no" title="function not covered" >getBackendPort
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-15T23:25:44.586Z
+                at 2024-09-16T12:35:58.785Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
